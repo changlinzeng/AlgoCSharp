@@ -15,3 +15,13 @@
 // Console.WriteLine(StringToInteger.MyAtoi("-2-"));
 // Console.WriteLine(StringToInteger.MyAtoi("+1"));
 // Console.WriteLine(StringToInteger.MyAtoi(" +  3"));
+
+// Console.WriteLine(ExclusiveTimeOfFunctions_636.ExclusiveTime(3, ["1:start:0","0:start:2","1:start:3","2:start:4","2:end:4","0:end:6","1:end:7","1:end:8"]));
+
+// Console.WriteLine(SortCharactersByFrequency_451.FrequencySort("tree"));
+
+// Console.WriteLine(CoinChange_322.CoinChange([1, 2, 5], 11));
+
+// Console.WriteLine(CoinChange_II_518.Change(5, [1,2,5]));
+
+// Console.WriteLine(SimplifyPath_71.SimplifyPath("/home/"));
