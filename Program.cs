@@ -25,3 +25,11 @@
 // Console.WriteLine(CoinChange_II_518.Change(5, [1,2,5]));
 
 // Console.WriteLine(SimplifyPath_71.SimplifyPath("/home/"));
+
+// Console.WriteLine(NetworkDelayTime_743.NetworkDelayTime([[2,1,1],[2,3,1],[3,4,1]], 4, 2));
+
+// Console.WriteLine(CountServersThatCommunicate_1267.CountServers([[1, 0], [1, 1]]));
+
+// Console.WriteLine(AsFarFromLandAsPossible_1162.MaxDistance([[1,0,0],[0,0,0],[0,0,0]]));
+
+// Console.WriteLine(KokoEatingBananas_875.MinEatingSpeed([100], 2));
