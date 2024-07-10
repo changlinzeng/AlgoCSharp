@@ -116,9 +116,15 @@ class Tree
   }
 }
 
-public class TreeNode(int val)
+public class TreeNode
 {
-  public int Val { get; } = val;
+  public TreeNode(){}
+  public TreeNode(int val)
+  {
+    this.Val = val;
+  }
+
+  public int Val { get; }
   public TreeNode? Left { get; set; }
   public TreeNode? Right { get; set; }
 }
