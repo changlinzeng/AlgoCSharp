@@ -56,3 +56,9 @@
 // Console.WriteLine(CamelcaseMatching_1023.CamelMatch(["FooBar"], "FB"));
 
 // Console.WriteLine(TaskScheduler_621.LeastInterval(['A','C','A','B','D','B'], 2));
+
+// Console.WriteLine(DecodeString_394.DecodeString("3[a]2[bc]"));
+
+// Console.WriteLine(MaximumNumberOfOccurrencesOfASubstring_1297.MaxFreq("abcde", 2, 3, 3));
+
+// Console.WriteLine(NumberOfDiceRollsWithTargetSum_1155.NumRollsToTarget(30, 30, 500));
