@@ -2,39 +2,38 @@ public class MaxAreaOfIsland_695 {
 
     public static int MaxAreaOfIsland(int[][] grid) {
         int rows = grid.Length, cols = grid[0].Length;
-        var visited = new Boolean[rows, cols];
-        int maxArea = 0, area = 0;
-        for (var i = 0; i < grid.Length; i++)
+        int maxArea = 0;
+        for (var i = 0; i < rows; i++)
         {
-          for (var j = 0; j < grid[0].Length; j++)
+          for (var j = 0; j < cols; j++)
           {
-            if (grid[i][j] == 1 && !visited[i, j])
+            if (grid[i][j] == 1)
             {
-              area = 0;
-              Dfs(grid, i, j, visited);
-              maxArea = Math.Max(maxArea, area);
+              maxArea = Math.Max(maxArea, Dfs(grid, i, j));
             }
           }
         }
         
         return maxArea;
 
-        void Dfs(int[][] grid, int row, int col, Boolean[,] visited)
+        int Dfs(int[][] grid, int row, int col)
         {
-          if (row < 0 || row >= grid.Length || col < 0 || col >= grid[0].Length)
+          if (grid[row][col] == 0)
           {
-            return;
+            return 0;
           }
-          if (visited[row, col] || grid[row][col] != 1)
+          var area = 1;
+          int[][] directions = [[0, 1], [0, -1], [1, 0], [-1, 0]];
+          grid[row][col] = 0;
+          foreach (var direction in directions)
           {
-            return;
+            int nextRow = row + direction[0], nextCol = col + direction[1];
+            if (nextRow >= 0 && nextRow < grid.Length && nextCol >= 0 && nextCol < grid[0].Length)
+            {
+              area += Dfs(grid, nextRow, nextCol);
+            }
           }
-          visited[row, col] = true;
-          area++;
-          Dfs(grid, row - 1, col, visited);
-          Dfs(grid, row + 1, col, visited);
-          Dfs(grid, row, col - 1, visited);
-          Dfs(grid, row, col + 1, visited);
+          return area;
         }
     }
 }
